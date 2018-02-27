@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { Meteor } from 'meteor/meteor';
 
 export default class Login extends React.Component {
@@ -33,23 +32,13 @@ export default class Login extends React.Component {
 
         {this.state.error ? <p>{this.state.error}</p> : undefined}
 
-        <form onSubmit={this.onSubmit.bind(this)}>
+        <form onSubmit={this.onSubmit.bind(this)} noValidate>
           <input type="email" ref="email" name="email" placeholder="Email"/>
           <input type="password" ref="password" name="password" placeholder="Password"/>
           <button>Login</button>
         </form>
-=======
 
-export default class Login extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>Login to Short Link</h1>
-
-        login form here
->>>>>>> origin/master
-
-        <Link to="/signup">Have an account?</Link>
+        <Link to="/signup">Need an account?</Link>
       </div>
     );
   }

@@ -11,7 +11,7 @@ export default class Links extends React.Component {
   render() {
     return (
       <div>
-      <p>Link component here</p>
+      <h1>You are Logged In</h1>
       <button onClick={() => this.onLogout('')}>Logout</button>
     </div>
     );
