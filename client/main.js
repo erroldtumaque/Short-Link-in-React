@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Meteor } from 'meteor/meteor';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -53,6 +54,30 @@ const onEnterPrivatePage = () => {
     ReactDOM.render(routes, document.getElementById('app'));
   });
 
+=======
+import {Meteor} from 'meteor/meteor';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Route, BrowserRouter, Switch} from 'react-router-dom';
+
+import Signup from '../imports/ui/Signup';
+import Link from '../imports/ui/Link';
+import Login from '../imports/ui/Login';
+import NotFound from '../imports/ui/NotFound';
+
+const routes = (
+  <BrowserRouter>
+    <div>
+      <Switch>
+        <Route path="/" exact component={Login}/>
+        <Route path="/signup" component={Signup}/>
+        <Route path="/link" component={Link}/>
+        <Route component={NotFound}/>
+      </Switch>
+    </div>
+</BrowserRouter>
+);
+>>>>>>> origin/master
 
 Meteor.startup(() => {
   ReactDOM.render(routes, document.getElementById('app'));

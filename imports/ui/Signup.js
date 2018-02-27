@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Accounts } from 'meteor/accounts-base';
 
 export default class Signup extends React.Component {
@@ -25,11 +26,16 @@ export default class Signup extends React.Component {
     });
   }
 
+=======
+
+export default class Signup extends React.Component {
+>>>>>>> origin/master
   render() {
     return (
       <div>
         <h1>Signup to Short Link</h1>
 
+<<<<<<< HEAD
         {this.state.error ? <p>{this.state.error}</p> : undefined}
 
         <form onSubmit={this.onSubmit.bind(this)}>
@@ -38,6 +44,9 @@ export default class Signup extends React.Component {
           <button>Create Account</button>
         </form>
 
+=======
+        signup form here
+>>>>>>> origin/master
 
         <Link to="/">Already have an account?</Link>
       </div>

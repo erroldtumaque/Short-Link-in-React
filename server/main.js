@@ -1,4 +1,5 @@
 import { Meteor } from 'meteor/meteor';
+<<<<<<< HEAD
 import SimpleSchema from 'simpl-schema';
 
 Meteor.startup(() => {
@@ -25,4 +26,9 @@ Meteor.startup(() => {
     hourlyWage: 24,
     email: 'errold.tumaque@gmail.com'
   });
+=======
+
+Meteor.startup(() => {
+  // code to run on server at startup
+>>>>>>> origin/master
 });
