@@ -5,5 +5,4 @@ import '../imports/api/linkDB';
 
 
 Meteor.startup(() => {
-  // code to run on server at startup
 });

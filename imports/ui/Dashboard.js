@@ -18,7 +18,7 @@ export default class Dashboard extends React.Component {
     e.preventDefault();
 
     if (url) {
-      LinkDB.insert({url, userId: Meteor.userId()});
+      Meteor.call('links.insert', url);
       this.refs.url.value = '';
     }
   }
