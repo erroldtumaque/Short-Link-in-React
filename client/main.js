@@ -13,6 +13,17 @@ Tracker.autorun(() => {
   onAuthChange(isAuthenticated);
 });
 
+
+// Stateless functional components
+// import React from 'react';
+// const MyComponent = (props) => {
+//   return (
+//     <div>
+//       <h1>{props.name}</h1>
+//     </div>
+//   );
+// };
+
 Meteor.startup(() => {
   ReactDOM.render(routes, document.getElementById('app'));
 });
