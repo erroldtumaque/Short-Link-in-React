@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Tracker } from 'meteor/tracker';
+import { Session } from 'meteor/session';
 
 import { LinkDB } from '../api/linkDB';
 import LinksListItem from './LinksListItem';
@@ -16,7 +17,9 @@ export default class LinksList extends React.Component {
   componentDidMount() {
     this.linksTracker = Tracker.autorun(() => {
       Meteor.subscribe('linksPublication');
-      let fetchedLinks = LinkDB.find().fetch();
+      let fetchedLinks = LinkDB.find({
+        visible: Session.get('showVisible')
+      }).fetch();
       this.setState({fetchedLinks});
     });
   }
